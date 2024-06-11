@@ -2455,8 +2455,8 @@ ngx_http_link_func_http_request(ngx_conf_t *cf, ngx_http_link_func_srv_conf_t* s
             ngx_pfree(cf->pool, hhb->body_content);
             ngx_pfree(cf->pool, hhb);
         }
+	close(sockfd);
     }
-    close(sockfd);
     return hhb;
 }
 
